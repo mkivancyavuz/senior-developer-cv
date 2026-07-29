@@ -12,14 +12,21 @@ export default function LanguageSwitcher() {
         <div key={code} className="flex items-center gap-3">
           <button
             onClick={() => setLocale(code)}
-            className={`text-sm md:text-lg lg:text-[1.4rem] font-medium uppercase tracking-wider transition-opacity duration-200 hover:opacity-70 ${
-              locale === code ? 'text-[#D7E2EA]' : 'text-[#D7E2EA]/40'
-            }`}
+            className="text-base md:text-lg lg:text-[1.4rem] font-medium uppercase tracking-wider transition-opacity duration-200 hover:opacity-70"
+            style={{
+              color: 'var(--text-main)',
+              opacity: locale === code ? 1 : 0.4,
+            }}
           >
             {localeLabels[code]}
           </button>
           {i < locales.length - 1 && (
-            <span className="text-[#D7E2EA]/30 text-sm md:text-lg">/</span>
+            <span
+              className="text-base md:text-lg"
+              style={{ color: 'var(--text-main)', opacity: 0.3 }}
+            >
+              /
+            </span>
           )}
         </div>
       ))}

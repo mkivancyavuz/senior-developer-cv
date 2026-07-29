@@ -13,7 +13,7 @@ export default function ContactPage() {
   return (
     <main
       className="min-h-screen flex flex-col"
-      style={{ background: '#0C0C0C', overflowX: 'clip' }}
+      style={{ background: 'var(--bg-main)', overflowX: 'clip' }}
     >
       <Navbar />
 
@@ -29,8 +29,12 @@ export default function ContactPage() {
 
         <FadeIn delay={0.25} y={20}>
           <p
-            className="text-[#D7E2EA] font-light max-w-[560px]"
-            style={{ fontSize: 'clamp(1rem, 1.6vw, 1.25rem)', opacity: 0.75 }}
+            className="font-light max-w-[560px]"
+            style={{
+              fontSize: 'clamp(1rem, 1.6vw, 1.25rem)',
+              opacity: 0.75,
+              color: 'var(--text-main)',
+            }}
           >
             {t.contactPage.subtitle}
           </p>
@@ -56,8 +60,8 @@ export default function ContactPage() {
         <FadeIn delay={0.55} y={10}>
           <Link
             href="/"
-            className="text-[#D7E2EA] font-light uppercase tracking-widest text-sm transition-opacity duration-200 hover:opacity-70"
-            style={{ opacity: 0.6 }}
+            className="font-light uppercase tracking-widest text-sm transition-opacity duration-200 hover:opacity-70"
+            style={{ opacity: 0.6, color: 'var(--text-main)' }}
           >
             ← {t.contactPage.backHome}
           </Link>

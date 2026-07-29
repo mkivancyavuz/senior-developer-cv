@@ -64,8 +64,12 @@ function ProjectCard({
       style={{ top: `${index * 28}px` }}
     >
       <motion.div
-        style={{ scale }}
-        className="w-full h-full rounded-[40px] sm:rounded-[50px] md:rounded-[60px] border-2 border-[#D7E2EA] bg-[#0C0C0C] p-4 sm:p-6 md:p-8 flex flex-col gap-6 origin-top"
+        style={{
+          scale,
+          borderColor: 'var(--border-main)',
+          background: 'var(--bg-main)',
+        }}
+        className="w-full h-full rounded-[40px] sm:rounded-[50px] md:rounded-[60px] border-2 p-4 sm:p-6 md:p-8 flex flex-col gap-6 origin-top"
       >
         <div className="flex items-center justify-between gap-4 flex-wrap">
           <div className="flex items-center gap-4 sm:gap-6">
@@ -76,10 +80,16 @@ function ProjectCard({
               {project.number}
             </span>
             <div className="flex flex-col gap-1">
-              <span className="text-[#D7E2EA] uppercase tracking-widest text-xs sm:text-sm opacity-60">
+              <span
+                className="uppercase tracking-widest text-xs sm:text-sm opacity-60"
+                style={{ color: 'var(--text-main)' }}
+              >
                 {t.projects.category[project.category]}
               </span>
-              <h3 className="text-[#D7E2EA] font-medium uppercase text-lg sm:text-2xl md:text-3xl">
+              <h3
+                className="font-medium uppercase text-lg sm:text-2xl md:text-3xl"
+                style={{ color: 'var(--text-main)' }}
+              >
                 {project.name}
               </h3>
             </div>
@@ -132,7 +142,8 @@ export default function ProjectsSection() {
   return (
     <section
       id="projects"
-      className="relative bg-[#0C0C0C] rounded-t-[40px] sm:rounded-t-[50px] md:rounded-t-[60px] -mt-10 sm:-mt-12 md:-mt-14 z-10 px-5 sm:px-8 md:px-10 pt-40 sm:pt-48 md:pt-56 pb-20 sm:pb-24 md:pb-32"
+      className="relative rounded-t-[40px] sm:rounded-t-[50px] md:rounded-t-[60px] -mt-10 sm:-mt-12 md:-mt-14 z-10 px-5 sm:px-8 md:px-10 pt-40 sm:pt-48 md:pt-56 pb-20 sm:pb-24 md:pb-32"
+      style={{ background: 'var(--bg-main)' }}
     >
       <FadeIn delay={0} y={40} className="w-full block">
         <FitHeading

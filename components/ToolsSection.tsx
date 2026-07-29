@@ -4,13 +4,26 @@ import FadeIn from './FadeIn';
 import { useLanguage } from '@/contexts/LanguageContext';
 
 const TOOLS = [
-  { icon: '/tools/html5.svg', alt: 'HTML5', name: 'HTML' },
-  { icon: '/tools/css3-t.png', alt: 'CSS3', name: 'CSS' },
-  { icon: '/tools/javascript.svg', alt: 'JavaScript', name: 'JavaScript' },
-  { icon: '/tools/typescript.svg', alt: 'TypeScript', name: 'TypeScript' },
-  { icon: '/tools/git.svg', alt: 'Git', name: 'Git' },
-  { icon: '/tools/github.svg', alt: 'GitHub', name: 'GitHub' },
-  { icon: '/tools/tool7-t.png', alt: 'Claude', name: 'Claude' },
+  { icon: '/tools/html5.svg', alt: 'HTML5', name: 'HTML', themed: false },
+  { icon: '/tools/css3-t.png', alt: 'CSS3', name: 'CSS', themed: false },
+  {
+    icon: '/tools/javascript.svg',
+    alt: 'JavaScript',
+    name: 'JavaScript',
+    themed: false,
+  },
+  {
+    icon: '/tools/typescript.svg',
+    alt: 'TypeScript',
+    name: 'TypeScript',
+    themed: false,
+  },
+  { icon: '/tools/git.svg', alt: 'Git', name: 'Git', themed: false },
+  // GitHub's mark is a solid white SVG (designed for the dark theme), so on
+  // light mode it needs to be recolored — invert it via CSS filter instead
+  // of the other brand icons, which keep their original colors either way.
+  { icon: '/tools/github.svg', alt: 'GitHub', name: 'GitHub', themed: true },
+  { icon: '/tools/tool7-t.png', alt: 'Claude', name: 'Claude', themed: false },
 ];
 
 export default function ToolsSection() {
@@ -18,7 +31,8 @@ export default function ToolsSection() {
 
   return (
     <section
-      className="relative bg-[#0C0C0C] rounded-t-[40px] sm:rounded-t-[50px] md:rounded-t-[60px] -mt-10 sm:-mt-12 md:-mt-14 z-10 px-5 sm:px-8 md:px-10 py-20 sm:py-24 md:py-32"
+      className="relative rounded-t-[40px] sm:rounded-t-[50px] md:rounded-t-[60px] -mt-10 sm:-mt-12 md:-mt-14 z-10 px-5 sm:px-8 md:px-10 py-20 sm:py-24 md:py-32"
+      style={{ background: 'var(--bg-main)' }}
     >
       <FadeIn delay={0} y={40} className="w-full block">
         <h2
@@ -38,12 +52,14 @@ export default function ToolsSection() {
                 <img
                   src={tool.icon}
                   alt={tool.alt}
-                  className="w-full h-full object-contain"
+                  className={`w-full h-full object-contain ${
+                    tool.themed ? 'theme-invert-icon' : ''
+                  }`}
                 />
               </div>
               <span
-                className="text-[#D7E2EA] font-medium uppercase tracking-wide text-center"
-                style={{ fontSize: '20px' }}
+                className="font-medium uppercase tracking-wide text-center"
+                style={{ fontSize: '20px', color: 'var(--text-main)' }}
               >
                 {tool.name}
               </span>

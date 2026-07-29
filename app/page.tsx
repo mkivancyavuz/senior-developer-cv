@@ -9,7 +9,7 @@ import Footer from '@/components/Footer';
 
 export default function Home() {
   return (
-    <main style={{ background: '#0C0C0C', overflowX: 'clip' }}>
+    <main style={{ background: 'var(--bg-main)', overflowX: 'clip' }}>
       <HeroSection />
       <MarqueeSection />
       <AboutSection />

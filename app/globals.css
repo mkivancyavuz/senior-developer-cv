@@ -8,14 +8,38 @@
   padding: 0;
 }
 
+:root,
+[data-theme='dark'] {
+  --bg-main: #0c0c0c;
+  --bg-alt: #ffffff;
+  --text-main: #d7e2ea;
+  --text-alt: #0c0c0c;
+  --border-main: #d7e2ea;
+  --heading-gradient: linear-gradient(180deg, #646973 0%, #bbccd7 100%);
+}
+
+[data-theme='light'] {
+  --bg-main: #ffffff;
+  --bg-alt: #f2f2f2;
+  --text-main: #0c0c0c;
+  --text-alt: #0c0c0c;
+  --border-main: #0c0c0c;
+  --heading-gradient: linear-gradient(180deg, #3a3f47 0%, #0c0c0c 100%);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 html,
 body,
 #__next {
-  background: #0c0c0c;
+  background: var(--bg-main);
 }
 
 body {
   font-family: 'Kanit', sans-serif;
+  transition: background-color 0.3s ease;
 }
 
 :lang(ar) {
@@ -31,8 +55,18 @@ body {
   display: none;
 }
 
+/* GitHub mark SVG is solid white (dark-theme only); invert it in light
+   mode so it stays visible against light backgrounds. */
+.theme-invert-icon {
+  filter: none;
+}
+
+[data-theme='light'] .theme-invert-icon {
+  filter: invert(1);
+}
+
 .hero-heading {
-  background: linear-gradient(180deg, #646973 0%, #bbccd7 100%);
+  background: var(--heading-gradient);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;

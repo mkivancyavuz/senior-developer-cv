@@ -8,8 +8,11 @@ const ACCENT_GRADIENT =
 export default function TransitionSection() {
   return (
     <section
-      className="relative bg-[#0C0C0C] flex flex-col items-center justify-center gap-8 sm:gap-10 px-6 pt-16 sm:pt-20 md:pt-24 pb-24 sm:pb-28 md:pb-32"
-      style={{ minHeight: 'clamp(340px, 34vw, 460px)' }}
+      className="relative flex flex-col items-center justify-center gap-8 sm:gap-10 px-6 pt-16 sm:pt-20 md:pt-24 pb-24 sm:pb-28 md:pb-32"
+      style={{
+        minHeight: 'clamp(340px, 34vw, 460px)',
+        background: 'var(--bg-main)',
+      }}
     >
       <div className="flex items-center justify-center w-full max-w-6xl gap-6 sm:gap-8">
         <span
@@ -48,8 +51,8 @@ export default function TransitionSection() {
       </div>
 
       <p
-        className="text-[#D7E2EA] font-light tracking-wide text-center opacity-70"
-        style={{ fontSize: '50px' }}
+        className="font-light tracking-wide text-center opacity-70"
+        style={{ fontSize: '50px', color: 'var(--text-main)' }}
       >
         Turning ideas into real-world projects.
       </p>

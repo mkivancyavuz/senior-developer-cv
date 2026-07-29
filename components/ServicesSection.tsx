@@ -10,7 +10,8 @@ export default function ServicesSection() {
   return (
     <section
       id="price"
-      className="bg-white rounded-t-[40px] sm:rounded-t-[50px] md:rounded-t-[60px] px-5 sm:px-8 md:px-10 py-20 sm:py-24 md:py-32"
+      className="rounded-t-[40px] sm:rounded-t-[50px] md:rounded-t-[60px] px-5 sm:px-8 md:px-10 py-20 sm:py-24 md:py-32"
+      style={{ background: 'var(--bg-alt)' }}
     >
       <FadeIn delay={0} y={40} className="w-full block">
         <FitHeading
@@ -23,7 +24,8 @@ export default function ServicesSection() {
           minPx={48}
           maxPx={450}
           containerClassName="mb-16 sm:mb-20 md:mb-28"
-          className="text-[#0C0C0C] font-black uppercase text-center"
+          className="font-black uppercase text-center"
+          style={{ color: 'var(--text-alt)' }}
         />
       </FadeIn>
 
@@ -35,23 +37,30 @@ export default function ServicesSection() {
               style={{ borderTop: '1px solid rgba(12, 12, 12, 0.15)' }}
             >
               <span
-                className="font-black text-[#0C0C0C] flex-shrink-0"
-                style={{ fontSize: 'clamp(3rem, 10vw, 140px)' }}
+                className="font-black flex-shrink-0"
+                style={{
+                  fontSize: 'clamp(3rem, 10vw, 140px)',
+                  color: 'var(--text-alt)',
+                }}
               >
                 {service.number}
               </span>
               <div className="flex flex-col gap-3 pt-2 sm:pt-4">
                 <h3
-                  className="text-[#0C0C0C] font-medium uppercase"
-                  style={{ fontSize: 'clamp(1rem, 2.2vw, 2.1rem)' }}
+                  className="font-medium uppercase"
+                  style={{
+                    fontSize: 'clamp(1rem, 2.2vw, 2.1rem)',
+                    color: 'var(--text-alt)',
+                  }}
                 >
                   {service.name}
                 </h3>
                 <p
-                  className="text-[#0C0C0C] font-light leading-relaxed max-w-2xl"
+                  className="font-light leading-relaxed max-w-2xl"
                   style={{
                     fontSize: 'clamp(0.85rem, 1.6vw, 1.25rem)',
                     opacity: 0.6,
+                    color: 'var(--text-alt)',
                   }}
                 >
                   {service.description}

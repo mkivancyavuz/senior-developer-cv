@@ -68,7 +68,10 @@ export default function AboutSection() {
             text={t.about.paragraph}
             splitBy={locale === 'ar' ? 'word' : 'char'}
             className="text-center font-medium leading-relaxed max-w-[560px]"
-            style={{ color: '#D7E2EA', fontSize: 'clamp(1rem, 2vw, 1.35rem)' }}
+            style={{
+              color: 'var(--text-main)',
+              fontSize: 'clamp(1rem, 2vw, 1.35rem)',
+            }}
           />
           <ContactButton />
         </div>
