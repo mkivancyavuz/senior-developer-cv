@@ -41,6 +41,9 @@ export interface Translations {
       personal: string;
     };
   };
+  tools: {
+    heading: string;
+  };
   contactPage: {
     heading: string;
     subtitle: string;
@@ -99,12 +102,15 @@ export const translations: Record<Locale, Translations> = {
       ],
     },
     projects: {
-      heading: 'Project',
+      heading: 'PROJECTS',
       live: 'Live Project',
       category: {
         client: 'Client',
         personal: 'Personal',
       },
+    },
+    tools: {
+      heading: 'Tools & Apps I Work With',
     },
     contactPage: {
       heading: "Let's talk",
@@ -162,12 +168,15 @@ export const translations: Record<Locale, Translations> = {
       ],
     },
     projects: {
-      heading: 'Proje',
+      heading: 'PROJELER',
       live: 'Canlı Proje',
       category: {
         client: 'Müşteri',
         personal: 'Kişisel',
       },
+    },
+    tools: {
+      heading: 'Çalıştığım Araçlar ve Uygulamalar',
     },
     contactPage: {
       heading: 'Hadi konuşalım',
@@ -225,12 +234,15 @@ export const translations: Record<Locale, Translations> = {
       ],
     },
     projects: {
-      heading: 'مشروع',
+      heading: 'المشاريع',
       live: 'مشاهدة المشروع',
       category: {
         client: 'عميل',
         personal: 'شخصي',
       },
+    },
+    tools: {
+      heading: 'الأدوات والتطبيقات التي أعمل بها',
     },
     contactPage: {
       heading: 'لنتحدث',
