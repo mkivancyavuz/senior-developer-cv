@@ -5,6 +5,7 @@ import ServicesSection from '@/components/ServicesSection';
 import ToolsSection from '@/components/ToolsSection';
 import TransitionSection from '@/components/TransitionSection';
 import ProjectsSection from '@/components/ProjectsSection';
+import Footer from '@/components/Footer';
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <ToolsSection />
       <TransitionSection />
       <ProjectsSection />
+      <Footer />
     </main>
   );
 }
