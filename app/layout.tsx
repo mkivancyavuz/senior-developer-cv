@@ -10,6 +10,7 @@ const kanit = Kanit({
   display: 'swap',
 });
 
+
 // Kanit has no Arabic glyphs, so Arabic text silently falls back to
 // whatever thin default font the OS provides. Cairo has a matching black
 // weight and Arabic coverage, so Arabic headings look as bold/substantial
