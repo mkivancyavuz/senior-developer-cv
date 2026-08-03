@@ -36,6 +36,15 @@ const PROJECTS: Project[] = [
     col1Image2: '/projects/senior-dev-2.png',
     col2Image: '/projects/senior-dev-1.png',
   },
+  {
+    number: '03',
+    category: 'personal',
+    name: 'Finance Dashboard',
+    col1Image1: '/projects/finance-app-2.png',
+    col1Image2: '/projects/finance-app-3.png',
+    col2Image: '/projects/finance-app-1.png',
+    liveUrl: 'https://budget-management-app-hazel.vercel.app/',
+  },
 ];
 
 function ProjectCard({
