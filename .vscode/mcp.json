@@ -1,0 +1,8 @@
+{
+  "servers": {
+    "contextos": {
+      "type": "http",
+      "url": "http://senior-developer-cv.localhost:7420/__contextos/mcp"
+    }
+  }
+}

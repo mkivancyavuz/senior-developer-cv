@@ -45,6 +45,14 @@ const PROJECTS: Project[] = [
     col2Image: '/projects/finance-app-1.png',
     liveUrl: 'https://budget-management-app-hazel.vercel.app/',
   },
+  {
+    number: '04',
+    category: 'client',
+    name: 'PERSONEL YÖNETİM PANELİ',
+    col1Image1: '/projects/personel-panel-small.png',
+    col1Image2: '/projects/personel-panel-medium.png',
+    col2Image: '/projects/personel-panel-large.png',
+  },
 ];
 
 function ProjectCard({
